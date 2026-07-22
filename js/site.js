@@ -160,7 +160,7 @@
     step=3; show(3);
     var plan = state.hours.indexOf('40')>-1 ? 'Full-Time' : 'Part-Time';
     m.querySelector('.msum').textContent =
-      'A vetted, pre-trained assistant for '+state.industry.toLowerCase()+', ready to take on '+
+      "We'll match you with a vetted assistant for "+state.industry.toLowerCase()+', trained on '+
       (state.need.length? state.need.join(', ').toLowerCase() : 'your day-to-day')+'.';
     m.querySelector('.plan').textContent = 'Best fit: '+plan+' plan';
     var q = '?need='+encodeURIComponent(state.need.join(','))+
