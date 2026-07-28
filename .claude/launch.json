@@ -4,8 +4,8 @@
     {
       "name": "scaledesk",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "4137", "."],
-      "port": 4137
+      "runtimeArgs": ["serve", "."],
+      "autoPort": true
     }
   ]
 }
