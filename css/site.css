@@ -351,3 +351,41 @@ h1 .w{padding-bottom:.08em;margin-bottom:-.08em}
 .hrs:hover{border-color:var(--cyan)}
 .hrs.on{border-color:var(--blue);background:var(--tint);box-shadow:0 0 0 1px var(--blue) inset}
 @media(max-width:700px){.plans[style*="repeat(2"]{grid-template-columns:1fr !important}}
+
+/* ---------- onboarding timeline (first-30-days) ---------- */
+.otl{position:relative;max-width:720px;margin:0 auto}
+.otl-item{position:relative;padding-left:60px;padding-bottom:34px}
+.otl-item:last-child{padding-bottom:0}
+.otl-item::before{content:"";position:absolute;left:15px;top:34px;bottom:-34px;width:2px;background:linear-gradient(180deg,rgba(0,102,214,.32),rgba(0,102,214,.1))}
+.otl-item:last-child::before{display:none}
+.otl-dot{position:absolute;left:0;top:0;width:32px;height:32px;border-radius:10px;background:var(--grad);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);z-index:1}
+.otl-dot svg{width:14px;height:14px;stroke:#fff;stroke-width:2.6;fill:none}
+.otl-dot.milestone{background:var(--flame);box-shadow:0 10px 26px -10px rgba(255,145,0,.55)}
+.otl-day{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:6px}
+.otl-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;transition:transform .25s var(--ease),box-shadow .25s,border-color .25s}
+.otl-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm);border-color:rgba(0,150,255,.3)}
+.otl-card h3{margin-bottom:6px}
+.otl-card p{color:var(--muted);font-size:14.5px}
+.otl-tag{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--flame);font-weight:800}
+
+/* ---------- handle grid (you vs. us contrast) ---------- */
+.handle-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:22px;align-items:start}
+@media(max-width:900px){.handle-grid{grid-template-columns:1fr}}
+.handle-col{background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px}
+.handle-col h3{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:700;margin-bottom:20px}
+.handle-col.we{background:var(--tint);border-color:rgba(0,102,214,.25)}
+.handle-col.we h3{color:var(--blue)}
+.handle-col .checks{margin-top:0}
+.handle-col .checks li{font-size:15px}
+
+/* ---------- phone-number reassurance card ---------- */
+.phone-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:64px 32px;text-align:center;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.phone-card::before{content:"";position:absolute;top:-40%;right:-8%;width:220px;height:170%;transform:rotate(30.3deg);background:var(--grad-soft);border-radius:60px;pointer-events:none}
+.phone-card .ic{width:56px;height:56px;border-radius:16px;background:var(--grad);display:flex;align-items:center;justify-content:center;margin:0 auto 22px}
+.phone-card .ic svg{width:26px;height:26px;stroke:#fff;stroke-width:2.2;fill:none}
+.phone-card .lead{max-width:580px;margin:14px auto 0}
+.phone-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;text-align:left}
+@media(max-width:768px){.phone-grid{grid-template-columns:1fr}}
+.phone-grid div{background:var(--tint);border:1px solid rgba(0,102,214,.16);border-radius:14px;padding:20px}
+.phone-grid b{display:block;font-size:15px;margin-bottom:6px}
+.phone-grid span{font-size:13.5px;color:var(--muted)}
