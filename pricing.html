@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pricing | ScaleDesk</title>
-<meta name="description" content="Two simple packages: Part-Time (20 hrs/week) or Full-Time (40 hrs/week). Month to month, no contracts.">
+<meta name="description" content="Three tiers — Assistant, Coordinator, Specialist — at 20 or 40 hrs/week. No setup fee, 3-month minimum.">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,12 +13,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ScaleDesk">
 <meta property="og:title" content="Pricing | ScaleDesk">
-<meta property="og:description" content="Two simple packages: Part-Time (20 hrs/week) or Full-Time (40 hrs/week). Month to month, no contracts.">
+<meta property="og:description" content="Three tiers — Assistant, Coordinator, Specialist — at 20 or 40 hrs/week. No setup fee, 3-month minimum.">
 <meta property="og:url" content="https://scaledesk.us/pricing.html">
 <meta property="og:image" content="https://scaledesk.us/assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pricing | ScaleDesk">
-<meta name="twitter:description" content="Two simple packages: Part-Time (20 hrs/week) or Full-Time (40 hrs/week). Month to month, no contracts.">
+<meta name="twitter:description" content="Three tiers — Assistant, Coordinator, Specialist — at 20 or 40 hrs/week. No setup fee, 3-month minimum.">
 <meta name="twitter:image" content="https://scaledesk.us/assets/og.jpg">
 <link rel="stylesheet" href="css/site.css?v=2">
 </head>
@@ -72,41 +72,65 @@
       </div>
     </div>
 
-    <!-- plans: 2 packages -->
-    <div class="plans" style="grid-template-columns:repeat(2,1fr);max-width:860px;margin:0 auto">
-      <div class="plan rv" id="plan-Part">
-        <h3>Part-Time</h3><p class="sub">20 hrs/week · your busiest hours covered</p>
-        <div class="price" style="font-size:38px">From $1,300<span style="font-size:16px;color:var(--muted);font-weight:600">/mo</span></div>
-        <p style="font-size:13.5px;color:var(--muted);margin-top:4px;font-weight:600">or $650 every two weeks</p>
-        <p style="font-size:13px;color:var(--faint);margin-top:6px">Your exact rate depends on the experience level you're matched with. Confirmed on your free call — no surprises.</p>
+    <!-- three tiers; prices swap with the hours toggle above -->
+    <!-- no inline grid-template-columns: .plans is already repeat(3,1fr) and has a
+         working max-width:900px → 1fr rule. An inline value would beat that media
+         query and leave three squeezed columns on a phone. -->
+    <div class="plans" style="max-width:1040px;margin:0 auto">
+
+      <div class="plan rv" id="tier-assistant">
+        <h3>Assistant</h3><p class="sub">You write the process, they follow it</p>
+        <div class="price" style="font-size:36px"><span data-mo="1,300|2,200">$1,300</span><span style="font-size:15px;color:var(--muted);font-weight:600">/mo</span></div>
+        <p style="font-size:13px;color:var(--muted);margin-top:4px;font-weight:600">or <span data-bw="650|1,100">$650</span> every two weeks</p>
+        <p style="font-size:12.5px;color:var(--faint);margin-top:6px"><strong style="color:var(--dark)">Daily direction.</strong> Best when you know exactly what needs doing and want it off your plate.</p>
         <a class="btn btn-ghost" href="https://app.scaledesk.us/get-matched">Get matched</a>
         <ul>
-          <li>1 dedicated pre-trained VA</li>
-          <li>Calls, scheduling &amp; follow-up</li>
+          <li>Admin &amp; scheduling</li>
+          <li>Email triage &amp; templated replies</li>
+          <li>CRM &amp; data entry</li>
+          <li>Phone: messages &amp; booking from a script</li>
           <li>Bilingual EN / ES</li>
-          <li>Works inside your tools</li>
-          <li><strong>No setup fee</strong></li>
-          <li>Free replacement guarantee</li>
+          <li>1–2 years experience</li>
         </ul>
       </div>
-      <div class="plan hot rv" data-d=".08" id="plan-Full">
+
+      <div class="plan hot rv" data-d=".08" id="tier-coordinator">
         <span class="pop">MOST POPULAR</span>
-        <h3>Full-Time</h3><p class="sub">40 hrs/week · a full seat on your team</p>
-        <div class="price grad-text" style="font-size:38px">From $2,200<span style="font-size:16px;color:var(--muted);font-weight:600">/mo</span></div>
-        <p style="font-size:13.5px;color:var(--muted);margin-top:4px;font-weight:600">or $1,100 every two weeks</p>
-        <p style="font-size:13px;color:var(--faint);margin-top:6px">Your exact rate depends on the experience level you're matched with. Confirmed on your free call — no surprises.</p>
+        <h3>Coordinator</h3><p class="sub">You define the outcome, they run it</p>
+        <div class="price grad-text" style="font-size:36px"><span data-mo="1,652|2,800">$1,652</span><span style="font-size:15px;color:var(--muted);font-weight:600">/mo</span></div>
+        <p style="font-size:13px;color:var(--muted);margin-top:4px;font-weight:600">or <span data-bw="826|1,400">$826</span> every two weeks</p>
+        <p style="font-size:12.5px;color:var(--faint);margin-top:6px"><strong style="color:var(--dark)">Weekly check-in.</strong> They own the phone, the inbox or the pipeline — not just the task.</p>
         <a class="btn btn-primary" href="https://app.scaledesk.us/get-matched">Get matched</a>
         <ul>
-          <li>Everything in Part-Time</li>
-          <li>Full-day coverage, your hours</li>
-          <li>Lead screening &amp; review management</li>
-          <li>Priority matching</li>
-          <li><strong>No setup fee</strong></li>
+          <li>Everything in Assistant</li>
+          <li>Resolves customer issues, not just messages</li>
+          <li>Lead follow-up &amp; pipeline management</li>
+          <li>Sends and chases invoices</li>
+          <li>Social media scheduling</li>
+          <li>3–5 years experience · fluent English</li>
+        </ul>
+      </div>
+
+      <div class="plan rv" data-d=".16" id="tier-specialist">
+        <h3>Specialist</h3><p class="sub">They tell you how it should work</p>
+        <div class="price" style="font-size:36px"><span data-mo="2,065|3,500">$2,065</span><span style="font-size:15px;color:var(--muted);font-weight:600">/mo</span></div>
+        <p style="font-size:13px;color:var(--muted);margin-top:4px;font-weight:600">or <span data-bw="1,032.50|1,750">$1,032.50</span> every two weeks</p>
+        <p style="font-size:12.5px;color:var(--faint);margin-top:6px"><strong style="color:var(--dark)">Minimal direction.</strong> Brings knowledge you don't have and improves how you work.</p>
+        <a class="btn btn-ghost" href="https://app.scaledesk.us/get-matched">Get matched</a>
+        <ul>
+          <li>Everything in Coordinator</li>
+          <li>QuickBooks — reconciliation, AR/AP</li>
+          <li>Estimates &amp; quotes</li>
+          <li>Industry-specific work</li>
+          <li>Builds the playbook, trains a backup</li>
+          <li>5+ years, specialist background</li>
         </ul>
       </div>
     </div>
 
-    <p class="rv" style="text-align:center;margin-top:26px;color:var(--muted);font-size:14.5px">Both packages include matching, onboarding, and ongoing management — <strong style="color:var(--dark)">no setup fee</strong>, and a 3-month minimum so your VA has time to actually learn your business. Need more than one assistant? <a href="https://app.scaledesk.us/get-matched" style="color:var(--blue);font-weight:600">Talk to us.</a></p>
+    <p class="rv" style="text-align:center;margin-top:26px;max-width:660px;margin-left:auto;margin-right:auto;color:var(--dark);font-size:16px;font-weight:650;line-height:1.45">The higher tier isn't more expensive per hour — it's cheaper in <em style="font-style:normal;color:var(--blue)">your</em> hours.</p>
+
+    <p class="rv" style="text-align:center;margin-top:14px;color:var(--muted);font-size:14.5px">Every tier includes matching, onboarding, and ongoing management — <strong style="color:var(--dark)">no setup fee</strong>, and a 3-month minimum so your VA has time to actually learn your business. Not sure which fits? <a href="https://app.scaledesk.us/get-matched" style="color:var(--blue);font-weight:600">We'll tell you on the call.</a></p>
 
     <p class="rv" style="text-align:center;margin-top:10px;color:var(--faint);font-size:12.5px;max-width:640px;margin-left:auto;margin-right:auto">Pay monthly or every two weeks — whichever suits your cash flow. Over your 3-month commitment the total is identical either way. Longer term, the two-week option works out slightly higher, since a year holds 26 two-week periods.</p>
   </div>
@@ -187,15 +211,24 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="js/site.js?v=2"></script>
 <script>
-// hours toggle → highlight package
+// Hours toggle swaps every tier's price. Each price span carries both values as
+// "part|full", so the markup stays the source of truth and the 20hr numbers are
+// what a visitor sees with JS disabled.
 (function(){
   var btns=document.querySelectorAll('.hrs');
-  var plans={Part:document.getElementById('plan-Part'),Full:document.getElementById('plan-Full')};
+  function apply(which){
+    var i = which === 'Full' ? 1 : 0;
+    document.querySelectorAll('[data-mo]').forEach(function(el){
+      el.textContent = '$' + el.dataset.mo.split('|')[i];
+    });
+    document.querySelectorAll('[data-bw]').forEach(function(el){
+      el.textContent = '$' + el.dataset.bw.split('|')[i];
+    });
+  }
   btns.forEach(function(b){ b.addEventListener('click',function(){
     btns.forEach(function(x){x.classList.remove('on')}); b.classList.add('on');
-    Object.keys(plans).forEach(function(k){ plans[k].classList.toggle('lift',k===b.dataset.plan); });
+    apply(b.dataset.plan);
   });});
-  plans.Part.classList.add('lift');
 })();
 </script>
 </body>
